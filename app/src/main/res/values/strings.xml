@@ -1,0 +1,295 @@
+<resources>
+    <string name="app_name">RealEstate</string>
+    <string name="default_user_name">ViaviWebtech</string>
+
+    <!---Intro -->
+    <string name="lbl_next">Next</string>
+    <string name="lbl_get_started">Get Started</string>
+    <string name="intro_title_1">Find Your Dream Home</string>
+    <string name="intro_desc_1">Find a home or space from our search bar. visit in just a few clicks.</string>
+    <string name="intro_title_2">Sale Your Property</string>
+    <string name="intro_desc_2">Just search and select your favorite property you want to lactate.</string>
+    <string name="intro_title_3">Rent Your Property</string>
+    <string name="intro_desc_3">Just search and select your favorite property you want to lactate.</string>
+
+    <!-- if you want rtl then add true other wise false-->
+    <string name="isRTL">false</string>
+
+    <!---Login -->
+    <string name="lbl_welcome_back">Welcome Back!</string>
+    <string name="lbl_skip">Skip</string>
+    <string name="msg_let_s_log_in_a">Let\'s Log in. Apply to Property!</string>
+    <string name="lbl_email">Email*</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_forgot_password">Forgot Password?</string>
+    <string name="lbl_remember_me">Remember me</string>
+    <string name="lbl_log_in">Log In</string>
+    <string name="msg_or_continue_with">or continue with</string>
+    <string name="lbl_google">Log in with Google</string>
+    <string name="msg_by_signing_in">By Signing in you accept</string>
+    <string name="lbl_privacy_policy">Privacy Policy</string>
+    <string name="msg_don_t_have_an_account">Don\'t have an account?</string>
+    <string name="lbl_sign_up">Sign Up</string>
+    <string name="please_enter_email">Please enter email</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="please_enter_name">please enter name</string>
+    <string name="please_enter_phone">Please enter phone no</string>
+    <string name="please_accept">Accept privacy policy</string>
+
+    <string name="edit_profile">Edit Profile</string>
+    <string name="fav_property">Favorite Property</string>
+    <string name="edit_logout">Logout</string>
+    <string name="edit_update">Update</string>
+    <string name="no_fav_msg">We can\'t find any favorite item in this section..</string>
+
+    <string name="logout_message">Are you sure you want to logout ?</string>
+    <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout_yes">Yes,Logout</string>
+
+    <!---Register-->
+    <string name="lbl_reg_sign_up">Sign Up</string>
+    <string name="msg_let_s_sign_up">Let\'s Sign Up. Apply to Property!</string>
+    <string name="lbl_name">Name*</string>
+    <string name="lbl_phone">Phone</string>
+    <string name="lbl_register">Register</string>
+    <string name="msg_by_signing_up">By Signing up you accept</string>
+    <string name="msg_already_have_an_account">Already have an account?</string>
+    <string name="lbl_reg_log_in">Login</string>
+
+    <!---Forgot Password -->
+    <string name="msg_forgot_pass">Enter your valid email address below and we will send you email with instructions on how to change your password</string>
+    <string name="lbl_send_email">Send Email</string>
+
+    <!---Home -->
+    <string name="home">Home</string>
+    <string name="latest">Latest</string>
+    <string name="property">My Property</string>
+    <string name="category">Category</string>
+    <string name="setting">Setting</string>
+    <string name="find_your_500">Find your Property</string>
+    <string name="search_home">Enter your keyword..</string>
+    <string name="search_property">Search Property</string>
+    <string name="recent_property">Recent Property</string>
+    <string name="popular_property">Popular Property</string>
+    <string name="latest_property">Latest Property</string>
+    <string name="see_all">See All</string>
+    <string name="home_category">Categories</string>
+    <string name="search_home_result">Search Results</string>
+
+    <string name="select_home">Select Purpose</string>
+    <string name="select_home_type">Select Category</string>
+    <string name="select_home_loc">Select Location</string>
+ <!---Search   <string-array name="buy_sell_arrays2">
+        <item>Sale</item>
+        <item>Rent</item>
+    </string-array>
+>
+    <!-Error Message-->
+    <string name="no_internet">No Internet Connection!</string>
+    <string name="no_internet_msg">There is no internet connection</string>
+    <string name="refresh_now">Refresh Now</string>
+    <string name="no_data">No Results Found</string>
+    <string name="no_data_msg">We can\'t find any item in this section..</string>
+    <string name="no_property_msg">User not added any property..</string>
+    <string name="no_error">Error!</string>
+    <string name="no_error_msg">Failed to load data please try again!</string>
+
+    <string name="rent_text">Rent</string>
+    <string name="sell_text">Sell</string>
+
+    <!---Latest-->
+    <string name="sort_by_title">Sort By</string>
+    <string name="sort_by_latest">Latest</string>
+    <string name="sort_by_high_price">Price:- High to Low</string>
+    <string name="sort_by_low_price">Price:- Low to High</string>
+    <string name="sort_by_distance">Distance</string>
+
+    <!---Category colors-->
+    <integer-array name="cat_bg">
+        <item>@color/cat_bg_1</item>
+        <item>@color/cat_bg_2</item>
+        <item>@color/cat_bg_3</item>
+        <item>@color/cat_bg_4</item>
+        <item>@color/cat_bg_5</item>
+        <item>@color/cat_bg_6</item>
+        <item>@color/cat_bg_7</item>
+    </integer-array>
+    <integer-array name="cat_title_text">
+        <item>@color/cat_text_1</item>
+        <item>@color/cat_text_2</item>
+        <item>@color/cat_text_3</item>
+        <item>@color/cat_text_4</item>
+        <item>@color/cat_text_5</item>
+        <item>@color/cat_text_6</item>
+        <item>@color/cat_text_7</item>
+    </integer-array>
+
+    <!---Advance search-->
+    <string name="advance_search_title">Advance Property Filter</string>
+    <string name="recommended_filter">Recommended Filter</string>
+    <string name="recommended_very">Verified</string>
+    <string name="fil_loc">Location</string>
+    <string name="non_verified_properties">Non Verified Properties</string>
+    <string name="verified_properties">Verified Properties</string>
+    <string name="bedrooms">Bedrooms</string>
+    <string name="bedrooms_1">1</string>
+    <string name="bedrooms_2">2</string>
+    <string name="bedrooms_3">3</string>
+    <string name="bedrooms_4">4+</string>
+    <string name="bath">Bathrooms</string>
+    <string name="bath_any">Any</string>
+    <string name="bath_1">1</string>
+    <string name="bath_2">2</string>
+    <string name="bath_3">3</string>
+    <string name="furnishing">Furnishing</string>
+    <string name="furnishing_semi">Semi- Furnished</string>
+    <string name="furnishing_un">Unfurnished</string>
+    <string name="price_range">Price Range</string>
+    <string name="price_range_line"> - </string>
+    <string name="type_title">Property Type</string>
+    <string name="filter_clear">Clear Filter</string>
+    <string name="filter_apply">Apply Filter</string>
+
+    <string name="show_title">Show By</string>
+
+    <!---Detail-->
+    <string name="owner_title">Owner</string>
+    <string name="overview">Overview</string>
+    <string name="amenities">Amenities</string>
+    <string name="floor_plan">Floor Plan</string>
+    <string name="gallery">Photos</string>
+    <string name="related_property">Related Property</string>
+    <string name="detail_bed">\u0020Beds</string>
+    <string name="detail_bath">\u0020Bath</string>
+    <string name="detail_very">Verified</string>
+    <string name="detail_non_very">Non Verified</string>
+    <string name="property_gallery">Property Photos</string>
+    <string name="item_size">%d +</string>
+
+    <string name="share_msg">Download this application</string>
+    <string name="logout_disable">Admin disable or delete your account</string>
+    <string name="ok">OK</string>
+    <string name="location_permission">Location permission require..</string>
+    <string name="license_msg">You are using invalid License or Package name is already in use, for more information contact us: info@viaviweb.com or viaviwebtech@gmail.com</string>
+    <string name="loading">Loading..</string>
+    <string name="login_require">Login require..</string>
+
+    <!---Add property-->
+    <string name="update_property_title">Update Properties</string>
+    <string name="add_property_title">Add Properties</string>
+    <string name="add_property_name">Property Name</string>
+    <string name="add_property_desc">Property Description</string>
+    <string name="add_property_phone">Phone Number</string>
+    <string name="add_property_address">Address</string>
+    <string name="add_property_lat">Latitude</string>
+    <string name="add_property_long">Longitude</string>
+    <string name="add_property_bed">Bedrooms</string>
+    <string name="add_property_bath">Bathrooms</string>
+    <string name="add_property_area">Area</string>
+    <string name="add_property_price">Price</string>
+    <string name="add_property_amenity">Amenities(ex. Lawn,Internet)</string>
+    <string name="add_property_furnished">Select Furnished</string>
+    <string name="add_property_fea_image">Featured Image</string>
+    <string name="add_property_plan_image">Floor Plan Image</string>
+    <string name="add_property_gallery_image">Gallery Image</string>
+    <string name="add_property_select_image">Select Image</string>
+    <string name="add_property_submit">Submit</string>
+    <string name="add_property_enter">Enter %s</string>
+    <string name="add_property_select">Select %s</string>
+
+
+
+
+    <!---Report-->
+    <string name="report_title">Report Property</string>
+    <string name="report_write_title">Write your report</string>
+    <string name="report_write_reason">Write your reason..</string>
+    <string name="report_may_later">MayBe Later</string>
+    <string name="report_submit">Submit</string>
+
+    <!---Setting & About-->
+    <string name="setting_title">Setting</string>
+    <string name="setting_noti">Enable Push Notification</string>
+    <string name="setting_dark">Theme Mode</string>
+    <string name="setting_more">More App</string>
+    <string name="setting_share">Share App</string>
+    <string name="setting_contact">Contact Us</string>
+    <string name="setting_rate">Rate App</string>
+    <string name="no_link_found">No url found..</string>
+    <string name="about_title">About Us</string>
+    <string name="lbl_company">Company</string>
+    <string name="lbl_app_version">App Version</string>
+    <string name="lbl_email_address">Email</string>
+    <string name="lbl_website">Website</string>
+    <string name="lbl_contact">Contact Us</string>
+
+    <string name="contact_info_add">Address</string>
+    <string name="contact_info_phone">Phone</string>
+    <string name="contact_info_email">Email</string>
+    <string name="contact_info_map">Map</string>
+
+    <!---My Subscription-->
+    <string name="subscription_title">My Subscription</string>
+    <string name="current_plan">Current Plan : </string>
+    <string name="expired_on">Expire On : </string>
+    <string name="user_total_property">Total Property : </string>
+    <string name="plan_property_limit">Property Limit : </string>
+    <string name="plan_buy">Buy Plan</string>
+
+    <!---Plan & Payment-->
+    <string name="subscription_plan">Subscription Plan</string>
+    <string name="subscription_msg">User can upload properties based on plan. choose plan based on your usage. Below there are plan name,price,property limit and validity days.</string>
+    <string name="select_plan">Select Plan</string>
+    <string name="plan_line">/</string>
+    <string name="plan_apply">%s Property Apply</string>
+    <string name="plan_msg">Property Limit reached buy plan</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="proceed_to_pay">Proceed to Pay</string>
+    <string name="payment_success">Payment Successful</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="payment_select">Select Payment Method</string>
+    <string name="no_payment_msg">We can\'t find any payment method..</string>
+    <string name="pay">Pay Now</string>
+    <string name="payment_stripe">Stripe</string>
+    <string name="payment_paypal">PayPal</string>
+    <string name="payment_razor">RazorPay</string>
+    <string name="payment_paystack">Paystack</string>
+    <string name="payment_payumoney">PayUMoney</string>
+    <string name="payment_flutter">Flutterwave</string>
+    <string name="payment_sslcommerz">SslCommerz</string>
+    <string name="payment_need_phone">Payment need phone</string>
+    <string name="payment_cinetpay">CinetPay</string>
+    <string name="payment_manual">Manual Bank Transfer</string>
+
+
+    <!---Payment Error-->
+    <string name="paypal_payment_error_1">an extremely unlikely failure occurred</string>
+    <string name="paypal_payment_error_2">The user canceled.</string>
+    <string name="paypal_payment_error_3">An invalid Payment was submitted</string>
+    <string name="paypal_payment_error_4">Paypal failure</string>
+    <string name="stripe_payment_error_1">Stripe failure</string>
+    <string name="stripe_token_error">Some error occurred when generating stripe token</string>
+    <string name="proceed_with_payment">Now Proceed with Payment</string>
+    <string name="razor_payment_error_1">Razor Pay failure</string>
+    <string name="razor_desc">Property app payment</string>
+    <string name="pay_stack_error_1">Some error occurred</string>
+    <string name="flutterwave_payment_error">Flutterwave Pay failure</string>
+    <string name="flutterwave_payment_failed">Flutterwave Payment failed</string>
+    <string name="flutterwave_payment_cancel">Flutterwave Payment cancel</string>
+
+    <string name="admob_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="applovin_sdk_key">xxxx</string>
+
+    <string name="back_key">Please click BACK again to exit</string>
+
+    <string name="app_update_title">App Update</string>
+    <string name="app_update_btn">Update</string>
+    <string name="app_cancel_btn">Cancel</string>
+
+    <string name="cinetpay_success">Your payment has been successfully completed</string>
+    <string name="cinetpay_failed">Your payment failed</string>
+
+    <string name="more_app_link">https://play.google.com/store/apps/developer?id=WhatsApp+LLC</string>
+    <string name="aboutt">Welcome to Real Estate Store, an app I developed independently as part of my school project. My name is Omar Fakhouri, and this project reflects the skills, creativity, and knowledge I have gained throughout my academic journey. I created this app to make it easier for investors, venture capitalists, and anyone interested in buying or renting real estate to search for properties using advanced search features. The goal of this app is to provide a simple and effective way for users to explore properties and find the option that best matches their needs. Thank you for checking out my app. I hope you find it useful and easy to use.</string>
+</resources>

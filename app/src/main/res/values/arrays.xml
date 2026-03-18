@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="category">
+        <item>Select Category</item>
+        <item>Apartment</item>
+        <item>Commercial</item>
+        <item>House</item>
+        <item>Industrial</item>
+        <item>Land</item>
+    </string-array>
+
+    <string-array name="rent_sell_array">
+        <item>Select Purpose</item>
+        <item>Sell</item>
+        <item>Rent</item>
+    </string-array>
+    <string-array name="rent_buy_array">
+        <item>Select Purpose</item>
+        <item>buy</item>
+        <item>Rent</item>
+    </string-array>
+
+    <string-array name="location_array">
+        <item>Select Location</item>
+        <item>Jerusalem</item>
+        <item>Tel Aviv</item>
+        <item>Haifa</item>
+        <item>Ashdod</item>
+        <item>Netanya</item>
+        <item>Beer Sheva</item>
+        <item>Petah Tikva</item>
+        <item>Holon</item>
+        <item>Bnei Brak</item>
+        <item>Ramat Gan</item>
+        <item>Ashkelon</item>
+        <item>Rehovot</item>
+        <item>Bat Yam</item>
+        <item>Rishon LeZion</item>
+        <item>Kfar Saba</item>
+        <item>Hadera</item>
+        <item>Nazareth</item>
+        <item>Umm al-Fahm</item>
+        <item>Safed</item>
+        <item>Tiberias</item>
+        <item>Eilat</item>
+        <item>Acre</item>
+        <item>Nazareth Illit</item>
+        <item>Modiin</item>
+        <item>Beit Shemesh</item>
+        <item>Lod</item>
+        <item>Ramla</item>
+    </string-array>
+
+    <string-array name="furnished_array">
+        <item>Select Furnished</item>
+        <item>Furnished</item>
+        <item>Unfurnished</item>
+    </string-array>
+
+    <string-array name="verified_array">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+
+        <array name="default_price_range">
+            <item>0</item>
+            <item>5000000</item>
+        </array>
+</resources>

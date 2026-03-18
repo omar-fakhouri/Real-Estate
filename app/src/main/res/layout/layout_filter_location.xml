@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cbLocJerusalem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="Jerusalem" />
+
+        <CheckBox
+            android:id="@+id/cbLocTelAviv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Tel Aviv" />
+
+        <CheckBox
+            android:id="@+id/cbLocHaifa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Haifa" />
+
+        <CheckBox
+            android:id="@+id/cbLocAshdod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Ashdod" />
+
+        <CheckBox
+            android:id="@+id/cbLocNetanya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Netanya" />
+
+        <CheckBox
+            android:id="@+id/cbLocBeerSheva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Beer Sheva" />
+
+        <CheckBox
+            android:id="@+id/cbLocPetahTikva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Petah Tikva" />
+
+        <CheckBox
+            android:id="@+id/cbLocHolon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Holon" />
+
+        <CheckBox
+            android:id="@+id/cbLocBneiBrak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Bnei Brak" />
+
+        <CheckBox
+            android:id="@+id/cbLocRamatGan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Ramat Gan" />
+
+        <CheckBox
+            android:id="@+id/cbLocAshkelon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Ashkelon" />
+
+        <CheckBox
+            android:id="@+id/cbLocRehovot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Rehovot" />
+
+        <CheckBox
+            android:id="@+id/cbLocBatYam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Bat Yam" />
+
+        <CheckBox
+            android:id="@+id/cbLocRishon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Rishon LeZion" />
+
+        <CheckBox
+            android:id="@+id/cbLocKfarSaba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Kfar Saba" />
+
+        <CheckBox
+            android:id="@+id/cbLocHadera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Hadera" />
+
+        <CheckBox
+            android:id="@+id/cbLocNazareth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Nazareth" />
+
+        <CheckBox
+            android:id="@+id/cbLocUmmAlFahm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Umm al-Fahm" />
+
+        <CheckBox
+            android:id="@+id/cbLocSafed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Safed" />
+
+        <CheckBox
+            android:id="@+id/cbLocTiberias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Tiberias" />
+
+        <CheckBox
+            android:id="@+id/cbLocEilat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Eilat" />
+
+        <CheckBox
+            android:id="@+id/cbLocAcre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Acre" />
+
+        <CheckBox
+            android:id="@+id/cbLocNazarethIllit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Nazareth Illit" />
+
+        <CheckBox
+            android:id="@+id/cbLocModiin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Modiin" />
+
+        <CheckBox
+            android:id="@+id/cbLocBeitShemesh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Beit Shemesh" />
+
+        <CheckBox
+            android:id="@+id/cbLocLod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Lod" />
+
+        <CheckBox
+            android:id="@+id/cbLocRamla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="Ramla" />
+    </LinearLayout>
+</ScrollView>

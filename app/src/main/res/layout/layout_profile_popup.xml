@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="70dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rectangle_line" />
+
+        <RelativeLayout
+            android:id="@+id/layEdProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:fontFamily="@font/urbanistbold"
+                android:includeFontPadding="false"
+                android:layout_toStartOf="@+id/ivEdArwDown"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/edit_profile"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="@string/edit_profile" />
+
+            <ImageView
+                android:id="@+id/ivEdArwDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_arrow_profile_popup" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layFavProperty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:fontFamily="@font/urbanistbold"
+                android:includeFontPadding="false"
+                android:layout_toStartOf="@+id/ivEdArwFav"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/fav_property"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="@string/fav_property" />
+
+            <ImageView
+                android:id="@+id/ivEdArwFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_arrow_profile_popup" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:layout_toStartOf="@+id/ivEdArw"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:fontFamily="@font/urbanistbold"
+                android:includeFontPadding="false"
+                android:text="@string/logout"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="@string/logout" />
+
+            <ImageView
+                android:id="@+id/ivEdArw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_arrow_profile_popup" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

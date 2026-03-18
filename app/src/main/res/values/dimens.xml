@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="item_offset">5dp</dimen>
+    <dimen name="applovin_banner_height">50dp</dimen>
+</resources>

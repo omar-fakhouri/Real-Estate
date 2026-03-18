@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bottom_sheet_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/ivClose"
+            android:fontFamily="@font/urbanistblack"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@string/advance_search_title"
+            android:textColor="@color/title"
+            android:textSize="20sp"
+            tools:text="@string/advance_search_title" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close_plan" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/bottom_sheet_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:background="@color/bottom_sheet_line"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvBedRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_purple_bg"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanistextrabold"
+                android:includeFontPadding="false"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:text="@string/bedrooms"
+                android:textColor="@color/white2"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bottom_sheet_line" />
+
+            <TextView
+                android:id="@+id/tvBathRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_bg"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanistextrabold"
+                android:includeFontPadding="false"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:text="@string/bath"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bottom_sheet_line" />
+
+            <TextView
+                android:id="@+id/tvFurnishing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_bg"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanistextrabold"
+                android:includeFontPadding="false"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:text="@string/furnishing"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bottom_sheet_line" />
+
+            <TextView
+                android:id="@+id/tvRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_bg"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanistextrabold"
+                android:includeFontPadding="false"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:text="@string/price_range"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bottom_sheet_line" />
+
+            <TextView
+                android:id="@+id/tvTyeCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_bg"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanistextrabold"
+                android:includeFontPadding="false"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:text="@string/type_title"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bottom_sheet_line" />
+
+            <TextView
+                android:id="@+id/tvPur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_bg"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanistextrabold"
+                android:includeFontPadding="false"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:text="Purpose"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bottom_sheet_line" />
+
+            <TextView
+                android:id="@+id/tvLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_bg"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanistextrabold"
+                android:includeFontPadding="false"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:text="@string/fil_loc"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/bottom_sheet_line" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llVeri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbVeri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvVeriName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/verified_properties"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/verified_properties" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbNonVeri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvNonVeriName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/non_verified_properties"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/non_verified_properties" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbBed1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvBed1Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/bedrooms_1"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/bedrooms_1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbBed2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvBed2Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/bedrooms_2"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/bedrooms_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbBed3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvBed3Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/bedrooms_3"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/bedrooms_3" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbBed4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvBed4Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/bedrooms_4"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/bedrooms_4" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbBathAny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvBathAnyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/bath_any"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/bath_any" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbBath1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvBath1Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/bath_1"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/bath_1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbBath2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvBath2Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/bath_2"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/bath_2" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbBath3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvBath3Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/bath_3"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/bath_3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFurn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbFur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvFurName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/furnishing"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/furnishing" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbSemi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvSemiName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/furnishing_semi"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/furnishing_semi" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbUnFur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:includeFontPadding="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:buttonTint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/tvUnFurName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanistbold"
+                        android:singleLine="true"
+                        android:text="@string/furnishing_un"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/furnishing_un" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPriceRange"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/card_normal_bg"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        android:layout_centerHorizontal="true"
+                        app:rippleColor="@android:color/transparent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="8dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="3dp">
+
+                            <TextView
+                                android:id="@+id/tvRangeMin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/urbanistextrabold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="15k"
+                                android:textColor="@color/card_normal_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tvRangeLine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/urbanistextrabold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="@string/price_range_line"
+                                android:textColor="@color/card_normal_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tvRangeMax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/urbanistextrabold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="20k"
+                                android:textColor="@color/card_normal_text"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rangeSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPropertyType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAllType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:clipToPadding="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPropertyLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAllLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:clipToPadding="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bottom_sheet_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_bg"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="13dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClearFilter"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/urbanistextrabold"
+            android:includeFontPadding="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/filter_clear"
+            android:textAllCaps="false"
+            android:textColor="@color/card_normal_text"
+            android:textSize="16sp"
+            app:backgroundTint="@color/white_bg"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/card_select_bg"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnApplyFilter"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/urbanistextrabold"
+            android:includeFontPadding="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/filter_apply"
+            android:textAllCaps="false"
+            android:textColor="@color/card_select_text"
+            android:textSize="16sp"
+            app:backgroundTint="@color/card_select_bg"
+            app:cornerRadius="50dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

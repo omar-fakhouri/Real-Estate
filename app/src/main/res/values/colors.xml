@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#653BC0</color>
+    <color name="purple_700">#653BC0</color>
+    <color name="teal_200">#653BC0</color>
+    <color name="teal_700">#653BC0</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#653BC0</color>
+
+    <!---Intro -->
+    <color name="intro_bg">#FDFDFD</color>
+    <color name="intro_bottom_line">#80504F6D</color>
+    <color name="non_select_dot">#66504F6D</color>
+    <color name="select_dot">#7F56D9</color>
+    <color name="intro_btn_bg">#7F56D9</color>
+    <color name="intro_btn_text">#FFFFFF</color>
+    <color name="intro_title">#3F3D56</color>
+    <color name="intro_desc">#CC686689</color>
+    <color name="alert_dia_text">#3F3D56</color>
+
+    <color name="app_bg">#F9F6FF</color>
+    <color name="app_purple_bg">#7F56D9</color>
+    <color name="title">#3F3D56</color>
+    <color name="subTitle_80">#CC3F3D56</color>
+    <color name="btn_bg">#7F56D9</color>
+    <color name="btn_text">#FFFFFF</color>
+    <color name="cursor_color">#B24E4B66</color>
+    <color name="back_icon">#7F56D9</color>
+    <color name="upload_icon">#FFFFFF</color>
+    <color name="white_bg">#F9F9F9</color>
+    <color name="orange_bg">#F0635A</color>
+    <color name="fav_home_bg">#26653BC0</color>
+    <color name="white2">#FFFFFF</color>
+    <color name="purple">#7F56D9</color>
+    <color name="progress_bar">#7F56D9</color>
+    <color name="card_view_ripple">#33653BC0</color>
+    <color name="whatsapp_bg">#3324BA21</color>
+    <color name="share_bg">#26653BC0</color>
+    <color name="report_edit_border">#33653BC0</color>
+    <color name="subscription_text_bg">#26653BC0</color>
+    <color name="gray">#CC3F3D56</color>
+
+    <!---Login -->
+    <color name="login_edt_hint_text">#b24e4b66</color>
+    <color name="login_edt_text">#B24E4B66</color>
+    <color name="login_edt_text_bg">#FEFEFE</color>
+    <color name="login_other_text">#cc4e4b66</color>
+    <color name="login_uncheck_box_bg">#FEFEFE</color>
+    <color name="login_check_box_bg">#7F56D9</color>
+    <color name="login_uncheck_box_border">#4D4E4B66</color>
+    <color name="login_check_box_tick">#FEFEFE</color>
+    <color name="login_purple_text">#7F56D9</color>
+    <color name="login_pass_icon">#B24E4B66</color>
+
+    <!--Bottom bar -->
+    <color name="bottom_bar_select_bg">#26653BC0</color>
+    <color name="bottom_bar_normal_bg">#1A6D6C7E</color>
+    <color name="bottom_bar_normal_title">#6D6C7E</color>
+    <color name="bottom_bar_selected_title">#7F56D9</color>
+
+    <!--Top bar -->
+    <color name="online">#4CD964</color>
+    <color name="offline">#3F3D56</color>
+    <color name="search_bg">#653BC0</color>
+    <color name="home_top_bg">#7F56D9</color>
+    <color name="search_hint">#D1C7E7</color>
+    <color name="search_home_cursor">#FFFFFF</color>
+    <color name="spinner_text">#D1C7E7</color>
+    <color name="spinner_list_text">#3F3D56</color>
+    <color name="btn_search_home">#F0635A</color>
+
+    <!--Home-->
+    <color name="home_cat_border">#334E4B66</color>
+    <color name="rent_bg">#16A05E</color>
+    <color name="sell_bg">#F0635A</color>
+    <color name="pop_home_gradient_start">#004E4B66</color>
+    <color name="pop_home_gradient_end">#B33A393C</color>
+
+    <!--Latest -->
+    <color name="sort_by_bg">#33653BC0</color>
+    <color name="sort_by_text">#653BC0</color>
+    <color name="img_bg_purple">#653BC0</color>
+    <color name="img_bg_light_purple">#33653BC0</color>
+    <color name="img_select">#FFFFFF</color>
+    <color name="img_normal">#653BC0</color>
+    <color name="sort_by_dialog_line">#3365637B</color>
+    <color name="sort_by_dialog_text">#65637B</color>
+
+    <!--Category -->
+    <color name="cat_bg_1">#1AF0635A</color>
+    <color name="cat_text_1">#F0635A</color>
+    <color name="cat_bg_2">#1A2B86B5</color>
+    <color name="cat_text_2">#2B86B5</color>
+    <color name="cat_bg_3">#1A29D696</color>
+    <color name="cat_text_3">#29D696</color>
+    <color name="cat_bg_4">#1A293DED</color>
+    <color name="cat_text_4">#293DED</color>
+    <color name="cat_bg_5">#1AD223E1</color>
+    <color name="cat_text_5">#D223E1</color>
+    <color name="cat_bg_6">#1A24BA21</color>
+    <color name="cat_text_6">#24BA21</color>
+    <color name="cat_bg_7">#1AD63329</color>
+    <color name="cat_text_7">#D63329</color>
+ 
+    <!--Dialog -->
+    <color name="dialog_text">#4e4b66</color>
+    <color name="dialog_bg">#ffffff</color>
+    <color name="dialog_progress">#7F56D9</color>
+
+    <!--Advance Search Bottom sheet -->
+    <color name="bottom_sheet_line">#B2D9D9D9</color>
+    <color name="bottom_sheet_line2">#1AD9D9D9</color>
+    <color name="card_normal_bg">#267F56D9</color>
+    <color name="card_select_bg">#7F56D9</color>
+    <color name="card_normal_text">#7F56D9</color>
+    <color name="card_select_text">#FFFFFF</color>
+    <color name="seek_bar_default">#D9D9D9</color>
+    <color name="seek_bar_check">#7F56D9</color>
+
+    <!--Detail  -->
+    <color name="purple_text">#7F56D9</color>
+
+    <!--Profile  -->
+    <color name="profile_border">#CC7F56D9</color>
+    <color name="profile_edt_email_bg">#1FFFFFFF</color>
+
+    <!--Add Property  -->
+    <color name="dot_line_bg">#FFFFFF</color>
+    <color name="dot_line_border">#E4E7E6</color>
+    <color name="spinner_text_add_property">#B24E4B66</color>
+
+    <!--About & Setting -->
+    <color name="about_line">#D1DDEC</color>
+    <color name="switch_thumb_disable">#b24e4b66</color>
+    <color name="switch_track">#CC7F56D9</color>
+    <color name="switch_track_disable">#b24e4b66</color>
+    <color name="switch_thumb_enable">#7F56D9</color>
+    <color name="about_sub_title_bg">#263F3D56</color>
+
+    <!--Plan -->
+    <color name="plan_circle_unselect">#DBDBDB</color>
+    <color name="plan_circle_select">#FFFFFF</color>
+    <color name="plan_limit_bg">#33653BC0</color>
+    <color name="plan_title">#3F3D56</color>
+    <color name="plan_card_bg_unselect">#FFFFFF</color>
+    <color name="plan_name_unselect">#3F3D56</color>
+    <color name="plan_price_unselect">#3F3D56</color>
+    <color name="plan_days_unselect">#CC3F3D56</color>
+    <color name="plan_apply_unselect">#7F56D9</color>
+    <color name="plan_apply_select">#FFFFFF</color>
+    <color name="plan_card_bg_select">#7F56D9</color>
+    <color name="plan_text_select">#FFFFFF</color>
+    <color name="plan_days_select">#CCFFFFFF</color>
+    <color name="back_home_bg">#0E9D58</color>
+    <color name="payment_logo">#33653BC0</color>
+
+    <color name="rect_line">#A5A5A5</color>
+
+</resources>
