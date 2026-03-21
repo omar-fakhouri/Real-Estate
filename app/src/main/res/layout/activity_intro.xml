@@ -106,5 +106,5 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/intro_bottom_line" />
+        android:background="@drawable/fav_white_icon_bg" />
 </RelativeLayout>

@@ -135,6 +135,11 @@ public class SearchActivity extends AppCompatActivity {
         bindingSearch.btnClearFilter.setOnClickListener(v -> clearAllFilters());
 
         bindingSearch.btnApplyFilter.setOnClickListener(v -> applyFilters());
+
+        bindingSearch.ibLocation.setOnClickListener(v -> {
+            startActivity(new Intent(SearchActivity.this, MapActivity.class));
+        });
+
     }
 
     private void applyFilters() {

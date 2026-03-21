@@ -50,7 +50,10 @@ public class MyPropertyAdapter extends RecyclerView.Adapter<MyPropertyAdapter.Vi
         holder.tvLocation.setText(property.getLocation());
         holder.tvPrice.setText((property.getPrice() == null ? "" : property.getPrice()) + " ₪");
         holder.tvRentSell.setText(property.getPurpose());
-        holder.tvView.setText(String.valueOf(property.getViews()));
+        if(property.getViews()>1000)
+            holder.tvView.setText(String.valueOf(property.getViews()/1000)+"K");
+        else
+            holder.tvView.setText(String.valueOf(property.getViews()));
 
         Glide.with(context)
                 .load(property.getMainImage())

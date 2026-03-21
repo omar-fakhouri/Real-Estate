@@ -45,6 +45,7 @@
         <activity android:name="com.app.activities.SettingActivity" />
         <activity android:name="com.app.activities.AboutActivity" />
         <activity android:name="com.app.activities.SearchActivity" />
+        <activity android:name="com.app.activities.MapActivity" />
 
     </application>
 

@@ -49,7 +49,11 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         holder.tvTitle.setText(property.getTitle());
         holder.tvLocation.setText(property.getLocation());
         holder.tvPrice.setText(property.getPrice() + " ₪");
-        holder.tvView.setText(String.valueOf(property.getViews()));
+
+        if(property.getViews()>1000)
+            holder.tvView.setText(String.valueOf(property.getViews()/1000)+"K");
+        else
+            holder.tvView.setText(String.valueOf(property.getViews()));
 
         Glide.with(context)
                 .load(property.getMainImage())

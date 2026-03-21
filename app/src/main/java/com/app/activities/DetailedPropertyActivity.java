@@ -1,5 +1,9 @@
 package com.app.activities;
 
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -18,7 +22,9 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -70,7 +76,7 @@ public class DetailedPropertyActivity extends AppCompatActivity implements OnMap
         galleryList = new ArrayList<>();
 
         galleryAdapter = new GalleryAdapter(this, galleryList, imageUrl -> {
-            bindingDetailedProperty.ivFullScreen.setVisibility(View.VISIBLE);
+            bindingDetailedProperty.ivFullScreen.setVisibility(VISIBLE);
 
             Glide.with(DetailedPropertyActivity.this)
                     .load(imageUrl)
@@ -86,6 +92,7 @@ public class DetailedPropertyActivity extends AppCompatActivity implements OnMap
                 bindingDetailedProperty.ivFullScreen.setVisibility(View.GONE));
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void setupMap() {
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapDetail);
@@ -93,6 +100,23 @@ public class DetailedPropertyActivity extends AppCompatActivity implements OnMap
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
+
+        View mapTouchView = findViewById(R.id.mapTouchView);
+
+        mapTouchView.setOnTouchListener((v, event) -> {
+            switch (event.getAction()) {
+                case android.view.MotionEvent.ACTION_DOWN:
+                case android.view.MotionEvent.ACTION_MOVE:
+                    bindingDetailedProperty.cardMap.getParent().requestDisallowInterceptTouchEvent(true);
+                    break;
+
+                case android.view.MotionEvent.ACTION_UP:
+                case android.view.MotionEvent.ACTION_CANCEL:
+                    bindingDetailedProperty.cardMap.getParent().requestDisallowInterceptTouchEvent(false);
+                    break;
+            }
+            return false;
+        });
     }
 
     private void setupBasicClicks() {
@@ -123,8 +147,9 @@ public class DetailedPropertyActivity extends AppCompatActivity implements OnMap
                             .error(R.drawable.detail_placeholder)
                             .into(bindingDetailedProperty.ivProperty);
 
+
                     String price = document.getString("price");
-                    bindingDetailedProperty.tvPrice.setText((price == null ? "" : price) + " ₪");
+                    bindingDetailedProperty.tvPrice.setText(price + " ₪");
 
                     Long views = document.getLong("views");
                     bindingDetailedProperty.tvView.setText(String.valueOf(views != null ? views : 0));
@@ -154,7 +179,7 @@ public class DetailedPropertyActivity extends AppCompatActivity implements OnMap
 
                     if (images != null && !images.isEmpty()) {
                         galleryList.addAll(images);
-                        bindingDetailedProperty.rvGallery.setVisibility(View.VISIBLE);
+                        bindingDetailedProperty.rvGallery.setVisibility(VISIBLE);
                     } else {
                         bindingDetailedProperty.rvGallery.setVisibility(View.GONE);
                     }
@@ -181,7 +206,6 @@ public class DetailedPropertyActivity extends AppCompatActivity implements OnMap
 
         db.collection("users").document(ownerId).get()
                 .addOnSuccessListener(document -> {
-                    bindingDetailedProperty.tvOwnerName.setText(document.getString("name"));
                     bindingDetailedProperty.tvOwnerEmail.setText(document.getString("email"));
 
                     if (ownerPhone != null) {
@@ -220,22 +244,81 @@ public class DetailedPropertyActivity extends AppCompatActivity implements OnMap
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
+        mMap.getUiSettings().setScrollGesturesEnabled(true);
+        mMap.getUiSettings().setZoomGesturesEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setZoomGesturesEnabled(true);
+
+        mMap.setOnInfoWindowClickListener(marker -> {
+            Object tag = marker.getTag();
+
+            if (tag != null) {
+                String clickedPropertyId = tag.toString();
+
+                SharedPreferences sp = getSharedPreferences("user", MODE_PRIVATE);
+                sp.edit().putString("propertyId", clickedPropertyId).apply();
+
+                startActivity(new Intent(DetailedPropertyActivity.this, DetailedPropertyActivity.class));
+            }
+        });
+
         loadPropertyLocationOnMap();
     }
 
     private void loadPropertyLocationOnMap() {
-        if (mMap == null || propertyLatitude == null || propertyLongitude == null) {
+        if (mMap == null) {
             return;
         }
 
-        LatLng propertyLatLng = new LatLng(propertyLatitude, propertyLongitude);
-
         mMap.clear();
-        mMap.addMarker(new MarkerOptions()
-                .position(propertyLatLng)
-                .title("Property Location"));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(propertyLatLng, 15f));
+        db.collection("properties")
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+
+                    for (DocumentSnapshot doc : queryDocumentSnapshots.getDocuments()) {
+                        Double lat = doc.getDouble("latitude");
+                        Double lng = doc.getDouble("longitude");
+
+                        if (lat == null || lng == null) {
+                            continue;
+                        }
+
+                        String title = doc.getString("title");
+                        String price = doc.getString("price");
+                        String location = doc.getString("location");
+
+                        String snippet = "";
+                        if (price != null) {
+                            snippet += price + " ₪";
+                        }
+                        if (location != null) {
+                            if (!snippet.isEmpty()) {
+                                snippet += " - ";
+                            }
+                            snippet += location;
+                        }
+
+                        LatLng propertyLatLng = new LatLng(lat, lng);
+
+                        Marker marker = mMap.addMarker(new MarkerOptions()
+                                .position(propertyLatLng)
+                                .title(title != null ? title : "Property")
+                                .snippet(snippet));
+
+                        if (marker != null) {
+                            marker.setTag(doc.getId());
+                        }
+                    }
+
+                    if (propertyLatitude != null && propertyLongitude != null) {
+                        LatLng currentPropertyLatLng = new LatLng(propertyLatitude, propertyLongitude);
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentPropertyLatLng, 15f));
+                    }
+                });
     }
 
     public void openWhatsAppChat(String phone) {

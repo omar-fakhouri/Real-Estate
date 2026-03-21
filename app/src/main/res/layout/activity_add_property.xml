@@ -280,7 +280,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                android:weightSum="2"
+                >
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
@@ -307,7 +308,8 @@
                         android:textColorHint="@color/login_edt_hint_text"
                         android:textCursorDrawable="@drawable/cursor_gray"
                         android:textSize="16sp"
-                        tools:ignore="Autofill" />
+                        tools:ignore="Autofill"
+                        />
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
@@ -342,7 +344,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                android:weightSum="2"
+                >
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
@@ -694,7 +697,9 @@
         android:layout_alignParentBottom="true"
         app:cardBackgroundColor="@color/login_edt_text_bg"
         app:cardElevation="6dp"
-        app:shapeAppearanceOverlay="@style/CornerRadiusButton">
+        app:shapeAppearanceOverlay="@style/CornerRadiusButton"
+        android:layout_marginBottom="30dp"
+        >
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mbSubmit"
