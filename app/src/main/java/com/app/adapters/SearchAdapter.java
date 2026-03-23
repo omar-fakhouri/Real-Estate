@@ -62,6 +62,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
                 .error(R.drawable.home_popular_placeholder)
                 .into(holder.ivHomeItem);
 
+
         holder.itemView.setOnClickListener(v -> {
             if (listener != null && property.getId() != null) {
                 listener.onPropertyClick(property.getId());
@@ -71,6 +72,16 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         holder.ibFavorite.setOnClickListener(v -> {
             if (favoriteListener != null && property.getId() != null) {
                 favoriteListener.onFavoriteClick(property.getId());
+            }
+
+            Object tag = holder.ibFavorite.getTag();
+
+            if (tag == null || tag.equals("normal")) {
+                holder.ibFavorite.setImageResource(R.drawable.ic_fav_hover);
+                holder.ibFavorite.setTag("selected");
+            } else {
+                holder.ibFavorite.setImageResource(R.drawable.ic_fav);
+                holder.ibFavorite.setTag("normal");
             }
         });
     }

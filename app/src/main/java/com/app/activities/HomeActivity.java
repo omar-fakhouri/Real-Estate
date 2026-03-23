@@ -107,15 +107,19 @@ public class HomeActivity extends AppCompatActivity {
 
         bindingHome.includeBottomBar.ivHome.setColorFilter(Color.parseColor("#7F56D9"));
         bindingHome.includeBottomBar.tvHome.setTextColor(Color.parseColor("#7F56D9"));
+        bindingHome.includeBottomBar.fmHome.setBackgroundResource(R.drawable.bottom_bar_select_bg);
 
         bindingHome.includeBottomBar.ivSearch.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingHome.includeBottomBar.tvSearch.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingHome.includeBottomBar.fmSea.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingHome.includeBottomBar.ivProperty.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingHome.includeBottomBar.tvProperty.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingHome.includeBottomBar.fmProperty.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingHome.includeBottomBar.ivSetting.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingHome.includeBottomBar.tvSetting.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingHome.includeBottomBar.fmSetting.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingHome.tvHomeSeeAllPopular.setOnClickListener(v -> searchProperties());
         bindingHome.tvHomeSeeAllLatest.setOnClickListener(v -> searchProperties());
@@ -464,5 +468,6 @@ public class HomeActivity extends AppCompatActivity {
                         Toast.makeText(HomeActivity.this, "Added to favorites", Toast.LENGTH_SHORT).show())
                 .addOnFailureListener(e ->
                         Toast.makeText(HomeActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show());
+
     }
 }

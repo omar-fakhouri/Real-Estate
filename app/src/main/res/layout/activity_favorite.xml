@@ -7,9 +7,8 @@
 
     <include
         android:id="@+id/toolbar_main"
-        layout="@layout/toolbar_one" />
+        layout="@layout/toolbar_fav" />
 
-    <include layout="@layout/layout_top_pattern" />
 
     <RelativeLayout
         android:id="@+id/rlTopSec"

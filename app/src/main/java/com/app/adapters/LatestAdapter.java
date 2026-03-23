@@ -68,8 +68,18 @@ public class LatestAdapter extends RecyclerView.Adapter<LatestAdapter.ViewHolder
         });
 
         holder.ibFav.setOnClickListener(v -> {
-            if (favListener != null) {
+            if (favListener != null && property.getId() != null) {
                 favListener.onFavClick(property.getId());
+            }
+
+            Object tag = holder.ibFav.getTag();
+
+            if (tag == null || tag.equals("normal")) {
+                holder.ibFav.setImageResource(R.drawable.ic_fav_hover);
+                holder.ibFav.setTag("selected");
+            } else {
+                holder.ibFav.setImageResource(R.drawable.ic_fav);
+                holder.ibFav.setTag("normal");
             }
         });
     }

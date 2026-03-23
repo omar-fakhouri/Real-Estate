@@ -7,8 +7,7 @@
     android:layout_height="70dp"
     android:background="@drawable/bottom_corner_bg"
     android:orientation="horizontal"
-    android:weightSum="4"
-    >
+    android:weightSum="4">
 
     <LinearLayout
         android:id="@+id/llHome"
@@ -19,14 +18,14 @@
         android:layout_marginTop="5dp"
         android:orientation="vertical"
         android:layout_marginBottom="47dp"
-
-        >
+        android:background="@android:color/transparent">
 
         <FrameLayout
             android:id="@+id/fmHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bottom_bar_normal_bg">
+            android:background="@drawable/bottom_bar_select_bg">
+            <!--android:background="@drawable/bottom_bar_select_bg">-->
 
             <ImageView
                 android:id="@+id/ivHome"
@@ -40,8 +39,7 @@
                 android:contentDescription="@string/app_name"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_bottom_home"
-                app:tint="@color/bottom_bar_selected_title"
-                />
+                app:tint="@color/bottom_bar_selected_title" />
 
         </FrameLayout>
 
@@ -57,7 +55,6 @@
             android:textColor="@color/bottom_bar_selected_title"
             android:textSize="12sp" />
 
-
     </LinearLayout>
 
     <LinearLayout
@@ -70,7 +67,7 @@
         android:orientation="vertical">
 
         <FrameLayout
-            android:id="@+id/fmLatest"
+            android:id="@+id/fmSea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bottom_bar_normal_bg">

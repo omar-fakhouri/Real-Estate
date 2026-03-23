@@ -292,4 +292,5 @@
 
     <string name="more_app_link">https://play.google.com/store/apps/developer?id=WhatsApp+LLC</string>
     <string name="aboutt">Welcome to Real Estate Store, an app I developed independently as part of my school project. My name is Omar Fakhouri, and this project reflects the skills, creativity, and knowledge I have gained throughout my academic journey. I created this app to make it easier for investors, venture capitalists, and anyone interested in buying or renting real estate to search for properties using advanced search features. The goal of this app is to provide a simple and effective way for users to explore properties and find the option that best matches their needs. Thank you for checking out my app. I hope you find it useful and easy to use.</string>
+    <string name="delete">Delete</string>
 </resources>

@@ -1,7 +1,11 @@
 package com.app.activities;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -136,10 +140,6 @@ public class SearchActivity extends AppCompatActivity {
 
         bindingSearch.btnApplyFilter.setOnClickListener(v -> applyFilters());
 
-        bindingSearch.ibLocation.setOnClickListener(v -> {
-            startActivity(new Intent(SearchActivity.this, MapActivity.class));
-        });
-
     }
 
     private void applyFilters() {
@@ -233,7 +233,14 @@ public class SearchActivity extends AppCompatActivity {
 
                     if (searchList.isEmpty()) {
                         Toast.makeText(this, "No properties found", Toast.LENGTH_SHORT).show();
+                        return;
                     }
+                    LocationAttention();
+                    bindingSearch.ibLocation.setOnClickListener(v -> {
+                        MapActivity.propertyList = new ArrayList<>(searchList);
+                        startActivity(new Intent(SearchActivity.this, MapActivity.class));
+                    });
+
                 })
                 .addOnFailureListener(e ->
                         Toast.makeText(this, "Failed to load properties", Toast.LENGTH_SHORT).show()
@@ -309,6 +316,8 @@ public class SearchActivity extends AppCompatActivity {
 
         showSection(llBed);
         selectMenu(bindingSearch.tvBedRoom);
+
+        bindingSearch.ibLocation.setVisibility(View.GONE);
     }
 
     private String getSelectedBeds() {
@@ -470,14 +479,40 @@ public class SearchActivity extends AppCompatActivity {
 
         bindingSearch.includeBottomBar.ivHome.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingSearch.includeBottomBar.tvHome.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingSearch.includeBottomBar.fmHome.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingSearch.includeBottomBar.ivSearch.setColorFilter(Color.parseColor("#7F56D9"));
         bindingSearch.includeBottomBar.tvSearch.setTextColor(Color.parseColor("#7F56D9"));
+        bindingSearch.includeBottomBar.fmSea.setBackgroundResource(R.drawable.bottom_bar_select_bg);
 
         bindingSearch.includeBottomBar.ivProperty.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingSearch.includeBottomBar.tvProperty.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingSearch.includeBottomBar.fmProperty.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingSearch.includeBottomBar.ivSetting.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingSearch.includeBottomBar.tvSetting.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingSearch.includeBottomBar.fmSetting.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
+
     }
+
+    private void LocationAttention() {
+        bindingSearch.ibLocation.setVisibility(View.VISIBLE);
+
+        ValueAnimator animator = ValueAnimator.ofArgb(
+                Color.WHITE,
+                Color.parseColor("#7F56D9"),
+                Color.WHITE
+        );
+
+        animator.setDuration(600);
+        animator.setRepeatCount(1);
+
+        animator.addUpdateListener(animation -> {
+            int color = (int) animation.getAnimatedValue();
+            bindingSearch.ibLocation.setBackgroundTintList(ColorStateList.valueOf(color));
+        });
+
+        animator.start();
+    }
+
 }

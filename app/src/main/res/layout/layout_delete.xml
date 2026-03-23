@@ -26,16 +26,15 @@
         <TextView
             android:id="@+id/tv"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:ellipsize="end"
             android:fontFamily="@font/urbanistbold"
             android:singleLine="true"
-            android:text="@string/logout"
+            android:text="@string/delete"
             android:textColor="@color/title"
-            android:textSize="19sp"
-            tools:text="@string/logout" />
+            android:textSize="19sp" />
 
 
         <View

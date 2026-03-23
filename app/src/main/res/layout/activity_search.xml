@@ -25,6 +25,7 @@
             android:textColor="@color/title"
             android:textSize="20sp" />
 
+
         <ImageButton
             android:id="@+id/ibLocation"
             android:layout_width="46dp"
@@ -34,7 +35,9 @@
             android:layout_alignParentEnd="true"
             android:background="@drawable/fav_icon_bg"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_location_detail" />
+            android:src="@drawable/ic_location_detail"
+            android:visibility="gone"
+            />
 
     </RelativeLayout>
 

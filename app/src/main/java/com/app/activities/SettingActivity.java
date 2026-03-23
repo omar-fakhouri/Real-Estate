@@ -45,21 +45,25 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(new Intent(SettingActivity.this, HomeActivity.class)));
         bindingSetting.includeBottomBar.ivHome.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingSetting.includeBottomBar.tvHome.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingSetting.includeBottomBar.fmHome.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingSetting.includeBottomBar.llLatest.setOnClickListener(v ->
                 startActivity(new Intent(SettingActivity.this, SearchActivity.class)));
         bindingSetting.includeBottomBar.ivSearch.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingSetting.includeBottomBar.tvSearch.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingSetting.includeBottomBar.fmSea.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingSetting.includeBottomBar.llProperty.setOnClickListener(v ->
                 startActivity(new Intent(SettingActivity.this, MyPropertyActivity.class)));
         bindingSetting.includeBottomBar.ivProperty.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingSetting.includeBottomBar.tvProperty.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingSetting.includeBottomBar.fmProperty.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingSetting.includeBottomBar.llSetting.setOnClickListener(v ->
                 startActivity(new Intent(SettingActivity.this, SettingActivity.class)));
         bindingSetting.includeBottomBar.ivSetting.setColorFilter(Color.parseColor("#7F56D9"));
         bindingSetting.includeBottomBar.tvSetting.setTextColor(Color.parseColor("#7F56D9"));
+        bindingSetting.includeBottomBar.fmSetting.setBackgroundResource(R.drawable.bottom_bar_select_bg);
     }
 
     public void showAbout() {

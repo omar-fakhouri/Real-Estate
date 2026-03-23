@@ -79,21 +79,26 @@ public class MyPropertyActivity extends AppCompatActivity {
                 startActivity(new Intent(MyPropertyActivity.this, HomeActivity.class)));
         bindingMyProperty.includeBottomBar.ivHome.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingMyProperty.includeBottomBar.tvHome.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingMyProperty.includeBottomBar.fmHome.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingMyProperty.includeBottomBar.llLatest.setOnClickListener(v ->
                 startActivity(new Intent(MyPropertyActivity.this, SearchActivity.class)));
         bindingMyProperty.includeBottomBar.ivSearch.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingMyProperty.includeBottomBar.tvSearch.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingMyProperty.includeBottomBar.fmSea.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
 
         bindingMyProperty.includeBottomBar.llProperty.setOnClickListener(v ->
                 startActivity(new Intent(MyPropertyActivity.this, MyPropertyActivity.class)));
         bindingMyProperty.includeBottomBar.ivProperty.setColorFilter(Color.parseColor("#7F56D9"));
         bindingMyProperty.includeBottomBar.tvProperty.setTextColor(Color.parseColor("#7F56D9"));
+        bindingMyProperty.includeBottomBar.fmProperty.setBackgroundResource(R.drawable.bottom_bar_select_bg);
 
         bindingMyProperty.includeBottomBar.llSetting.setOnClickListener(v ->
                 startActivity(new Intent(MyPropertyActivity.this, SettingActivity.class)));
         bindingMyProperty.includeBottomBar.ivSetting.setColorFilter(Color.parseColor("#CC3F3D56"));
         bindingMyProperty.includeBottomBar.tvSetting.setTextColor(Color.parseColor("#CC3F3D56"));
+        bindingMyProperty.includeBottomBar.fmSetting.setBackgroundResource(R.drawable.bottom_bar_normal_bg);
+
     }
 
     private void loadUserInfoAndProperties() {

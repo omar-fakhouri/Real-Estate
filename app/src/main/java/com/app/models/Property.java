@@ -27,11 +27,15 @@ public class Property {
     private String amenity;
     private String category;
     private String furnished;
+    private double latitude;
+
+    private double longitude;
     private boolean available;
     private String mainImageUrl;
     private List<String> galleryImages;
     public Property(){}
-    public Property(String id, String title, String location, String price, String purpose, String userId, int views, Timestamp createdAt, String mainImage, String description, String phone, String address, String bed, String bath, String area, String amenity, String category, String furnished, boolean available, String mainImageUrl, List<String> galleryImages) {
+
+    public Property(String id, String title, String location, String price, String purpose, String userId, int views, Timestamp createdAt, String mainImage, String description, String phone, String address, String bed, String bath, String area, String amenity, String category, String furnished, double latitude, double longitude, boolean available, String mainImageUrl, List<String> galleryImages) {
         this.id = id;
         this.title = title;
         this.location = location;
@@ -50,6 +54,8 @@ public class Property {
         this.amenity = amenity;
         this.category = category;
         this.furnished = furnished;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.available = available;
         this.mainImageUrl = mainImageUrl;
         this.galleryImages = galleryImages;
@@ -221,5 +227,20 @@ public class Property {
 
     public void setGalleryImages(List<String> galleryImages) {
         this.galleryImages = galleryImages;
+    }
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }
