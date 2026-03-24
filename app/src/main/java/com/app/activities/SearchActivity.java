@@ -7,9 +7,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +24,10 @@ import com.app.adapters.SearchAdapter;
 import com.app.models.Property;
 import com.app.realestateapp.R;
 import com.app.realestateapp.databinding.ActivitySearchBinding;
+import com.bumptech.glide.Glide;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.slider.RangeSlider;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -79,6 +85,7 @@ public class SearchActivity extends AppCompatActivity {
         setupPriceSlider();
         setupButtons();
         setupBottomBar();
+        showProfileImage();
 
         showSection(llBed);
         selectMenu(bindingSearch.tvBedRoom);
@@ -140,6 +147,7 @@ public class SearchActivity extends AppCompatActivity {
 
         bindingSearch.btnApplyFilter.setOnClickListener(v -> applyFilters());
 
+        bindingSearch.clUserImage.getRoot().setOnClickListener(v -> profilePopUpWindow());
     }
 
     private void applyFilters() {
@@ -236,6 +244,7 @@ public class SearchActivity extends AppCompatActivity {
                         return;
                     }
                     bindingSearch.ibLocation.setVisibility(View.VISIBLE);
+                    bindingSearch.clUserImage.getRoot().setVisibility(View.GONE);
                     bindingSearch.ibLocation.setOnClickListener(v -> {
                         MapActivity.propertyList = new ArrayList<>(searchList);
                         startActivity(new Intent(SearchActivity.this, MapActivity.class));
@@ -318,6 +327,7 @@ public class SearchActivity extends AppCompatActivity {
         selectMenu(bindingSearch.tvBedRoom);
 
         bindingSearch.ibLocation.setVisibility(View.GONE);
+        bindingSearch.clUserImage.getRoot().setVisibility(View.VISIBLE);
     }
 
     private String getSelectedBeds() {
@@ -496,5 +506,115 @@ public class SearchActivity extends AppCompatActivity {
     }
 
 
+    public void profilePopUpWindow() {
+        SharedPreferences sp = getSharedPreferences("user", MODE_PRIVATE);
+        String userId = sp.getString("userId", null);
 
+        if (userId == null) {
+            showLoginRequiredMessage();
+            return;
+        }
+
+        BottomSheetDialog dialog = new BottomSheetDialog(this);
+        dialog.setContentView(R.layout.layout_profile_popup);
+
+        RelativeLayout rlEditProfile = dialog.findViewById(R.id.layEdProfile);
+        RelativeLayout rlFavProperty = dialog.findViewById(R.id.layFavProperty);
+        RelativeLayout rlLogout = dialog.findViewById(R.id.layLogout);
+
+        if (rlEditProfile != null) {
+            rlEditProfile.setOnClickListener(v -> {
+                startActivity(new Intent(this, EditProfileActivity.class));
+                dialog.dismiss();
+            });
+        }
+
+        if (rlFavProperty != null) {
+            rlFavProperty.setOnClickListener(v -> {
+                startActivity(new Intent(this, FavoriteActivity.class));
+                dialog.dismiss();
+            });
+        }
+
+        if (rlLogout != null) {
+            rlLogout.setOnClickListener(v -> {
+                logout();
+                dialog.dismiss();
+            });
+        }
+
+        dialog.show();
+    }
+    public void logout() {
+        BottomSheetDialog dialog = new BottomSheetDialog(this);
+        dialog.setContentView(R.layout.layout_logout);
+
+        View btnYes = dialog.findViewById(R.id.mbYes);
+        View btnCancel = dialog.findViewById(R.id.mbCancel);
+
+        if (btnYes != null) {
+            btnYes.setOnClickListener(v -> {
+                SharedPreferences sp = getSharedPreferences("user", MODE_PRIVATE);
+                sp.edit().remove("userId").apply();
+
+                Intent intent = new Intent(this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+
+                dialog.dismiss();
+            });
+        }
+
+        if (btnCancel != null) {
+            btnCancel.setOnClickListener(v -> dialog.dismiss());
+        }
+
+        dialog.show();
+    }
+    public void showLoginRequiredMessage() {
+        Snackbar snackbar = Snackbar.make(
+                findViewById(android.R.id.content),
+                "You are not even logged in",
+                Snackbar.LENGTH_LONG
+        );
+
+        snackbar.setDuration(4500);
+        snackbar.setAction("Login", v ->
+                startActivity(new Intent(SearchActivity.this, LoginActivity.class)));
+
+        snackbar.setTextColor(Color.BLACK);
+        snackbar.setActionTextColor(Color.BLACK);
+
+        View view = snackbar.getView();
+
+        if (view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+            params.setMargins(32, 0, 32, 32);
+            view.setLayoutParams(params);
+        }
+
+        GradientDrawable bg = new GradientDrawable();
+        bg.setColor(Color.WHITE);
+        bg.setCornerRadius(36f);
+
+        view.setBackground(bg);
+        view.setElevation(12f);
+        view.setPadding(24, 20, 24, 20);
+
+        snackbar.show();
+    }
+    private void showProfileImage() {
+        SharedPreferences sp = getSharedPreferences("user", MODE_PRIVATE);
+        String userId = sp.getString("userId", null);
+
+        if (userId != null) {
+            db.collection("users").document(userId).get().addOnSuccessListener(document -> {
+                String profileImage = document.getString("profileImage");
+
+                if (profileImage != null && !profileImage.isEmpty()) {
+                    Glide.with(this).load(profileImage).into(bindingSearch.clUserImage.ivUserImage);
+                }
+            });
+        }
+  }
 }
