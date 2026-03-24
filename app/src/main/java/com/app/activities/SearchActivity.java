@@ -235,7 +235,7 @@ public class SearchActivity extends AppCompatActivity {
                         Toast.makeText(this, "No properties found", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    LocationAttention();
+                    bindingSearch.ibLocation.setVisibility(View.VISIBLE);
                     bindingSearch.ibLocation.setOnClickListener(v -> {
                         MapActivity.propertyList = new ArrayList<>(searchList);
                         startActivity(new Intent(SearchActivity.this, MapActivity.class));
@@ -495,24 +495,6 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    private void LocationAttention() {
-        bindingSearch.ibLocation.setVisibility(View.VISIBLE);
 
-        ValueAnimator animator = ValueAnimator.ofArgb(
-                Color.WHITE,
-                Color.parseColor("#7F56D9"),
-                Color.WHITE
-        );
-
-        animator.setDuration(600);
-        animator.setRepeatCount(1);
-
-        animator.addUpdateListener(animation -> {
-            int color = (int) animation.getAnimatedValue();
-            bindingSearch.ibLocation.setBackgroundTintList(ColorStateList.valueOf(color));
-        });
-
-        animator.start();
-    }
 
 }
