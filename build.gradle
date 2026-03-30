@@ -1,4 +1,3 @@
-// Root build.gradle (Project)
 
 buildscript {
     repositories {

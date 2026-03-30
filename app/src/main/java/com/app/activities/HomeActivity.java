@@ -225,11 +225,11 @@ public class HomeActivity extends AppCompatActivity {
 
         Query query = db.collection("properties");
 
-        if (!purpose.equals("Select Purpose")) {
+        if (!purpose.equals("Purpose")) {
             query = query.whereEqualTo("purpose", purpose);
         }
 
-        if (!category.equals("Select Category")) {
+        if (!category.equals("Category")) {
             query = query.whereEqualTo("category", category);
         }
 
@@ -334,12 +334,12 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setupSpinners() {
         List<String> purposeList = new ArrayList<>();
-        purposeList.add("Select Purpose");
+        purposeList.add("Purpose");
         purposeList.add("Buy");
         purposeList.add("Rent");
 
         List<String> categoryList = new ArrayList<>();
-        categoryList.add("Select Category");
+        categoryList.add("Category");
         categoryList.add("Apartment");
         categoryList.add("Commercial");
         categoryList.add("House");
